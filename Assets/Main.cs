@@ -33,13 +33,13 @@ public class Main : MonoBehaviour
 					double prob = r.NextDouble();
 					Debug.Log("Prob Value: " + prob);
 					if(prob < redNum * 1.0 / 100 && red < redNum){
+						//Place Red Cube
 						matrix[i,j] = 2;
 						red = red + 1;
-						Debug.Log("Placed Red Cube " + red + "/" + redNum);
 					}else if (prob < (redNum + cubeNum) * 1.0 / 100 && cube < cubeNum){
+						//Place Normal Cube
 						matrix[i,j] = 1;
 						cube = cube + 1;
-						Debug.Log("Placed Cube " + cube + "/" + cubeNum);
 					}
 				}
 			}
